@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering Principles — Brow Nouveau</title>
+  <meta name="description" content="The engineering principles that govern how Brow Nouveau, LLC builds software: privacy, durability, ownership, restraint." />
+  <meta name="theme-color" content="#f7f4ef" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark-svg" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#6b4a2b"/>
+        <text x="32" y="44" font-family="Iowan Old Style, Charter, Georgia, serif"
+              font-weight="600" font-size="34" fill="#f7f4ef"
+              text-anchor="middle" letter-spacing="-1">bn</text>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Brow Nouveau</span>
+        <span class="brand-sub">Software Studio</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/about.html">About</a>
+      <a href="/principles.html" aria-current="page">Principles</a>
+      <a href="/notes/">Notes</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="page-header">
+    <p class="page-eyebrow">Principles</p>
+    <h1>How we decide what to build, and what not to.</h1>
+    <p class="lede">
+      These are the working principles we apply, in order, when a
+      decision is hard. They are not aspirations or marketing
+      copy — they are the actual filter that the work passes through.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>1. Privacy is architectural.</h2>
+    <p>
+      Privacy is not a paragraph in a policy. It is a property of the
+      system: where data lives, who holds the keys, how long it is
+      retained, what touches it on the way through. When privacy is
+      treated as a downstream concern — a clause to draft after the
+      product is built — it is structurally too late.
+    </p>
+    <p>
+      We design data flows before we design features. If the only way
+      a feature can be implemented requires us to see customer content
+      we don't currently have access to, we either redesign the
+      feature, or we don't build it. The end-to-end encrypted parts
+      of our products are not a marketing position; they are the
+      result of having said no to a small number of conveniences over
+      a long period of time.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>2. Boring is a feature.</h2>
+    <p>
+      The longer a piece of software lives, the more its dependencies
+      become liabilities. Every framework, build tool, and cloud
+      service in your stack is something that can break, change terms,
+      get sold, get deprecated, or simply require a migration on
+      someone else's schedule.
+    </p>
+    <p>
+      We choose tools the industry has already stopped arguing about.
+      That usually means vanilla web fundamentals on the client, a
+      mature server-side runtime, and a relational database. We will
+      pick a technology twenty years older than its trendier
+      alternative if the older one will still build cleanly in 2035.
+    </p>
+    <p>
+      The cost of "boring" is felt in the first month of a project.
+      The benefit is felt in every month after that.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>3. Smaller surface, sharper focus.</h2>
+    <p>
+      The default temptation, with any product, is to add. Each feature
+      seems individually defensible; the cumulative weight is what
+      kills the product. We treat additions as expensive.
+    </p>
+    <p>
+      A feature should answer three questions before it ships:
+    </p>
+    <ul>
+      <li>Does it serve a need we can describe in a sentence?</li>
+      <li>Will it still be the right answer to that need in two years?</li>
+      <li>If it stays in forever, is that a future we want?</li>
+    </ul>
+    <p>
+      Most candidates fail at least one. The ones that survive tend to
+      become structural — they earn their position rather than rent it.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>4. Own what matters.</h2>
+    <p>
+      We host our own infrastructure where the work demands it. We
+      avoid lock-in to platforms whose terms we cannot influence. We
+      keep an export path open for every piece of customer data we
+      hold, so that a customer who wants to leave can leave with
+      their work intact.
+    </p>
+    <p>
+      Ownership is not the same as building everything from scratch.
+      It means knowing which dependencies are load-bearing and being
+      prepared to replace any of them on our own timeline rather than
+      on someone else's.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>5. Engagement is not a goal.</h2>
+    <p>
+      We do not build for time-on-app. We do not build for daily
+      active usage as a primary metric. We do not build features whose
+      purpose is to bring the user back when they would otherwise have
+      moved on with their day.
+    </p>
+    <p>
+      A successful product fits cleanly into the rhythm of someone's
+      life. The right amount of time spent in our software is the
+      smallest amount that still does the job.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>6. Read your own logs. Answer your own support.</h2>
+    <p>
+      The team that ships the software should be the team that hears
+      from the people using it. Layers of intermediation between the
+      builders and the users degrade both — engineers stop knowing
+      what's actually happening, and users stop being heard with the
+      precision required to fix what's wrong.
+    </p>
+    <p>
+      We are small enough that there is no layer between the people
+      building the software and the people using it. We intend to
+      stay that way.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>7. Plain language.</h2>
+    <p>
+      Our documentation, our terms of service, our privacy policies,
+      and our release notes are written to be read by the customer.
+      We do not hide consequential terms in legalese. We do not
+      describe an opt-in by saying "we may." We say what the system
+      does, in the words a person would use.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>What this rules out</h2>
+    <p>
+      These principles are not symmetric. They mean we will not be
+      the studio that ships fastest, scales widest, or chases the
+      newest framework. We will not build the surveillance product, or
+      the engagement-loop product, or the product whose business
+      model depends on customers not understanding what they agreed to.
+    </p>
+    <p>
+      We are aware that this narrows our addressable market. We
+      consider the narrowing to be the point.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="footer-entity">
+      <strong>Brow Nouveau, LLC</strong>
+      A privately-held US limited liability company.<br/>
+      Independent software studio.
+    </p>
+    <p class="footer-meta">
+      &copy; 2026 Brow Nouveau, LLC. All rights reserved.<br/>
+      <a href="/contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

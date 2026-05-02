@@ -3,79 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brow Nouveau</title>
-  <meta name="description" content="Brow Nouveau, LLC is an independent software studio building careful, privacy-respecting tools." />
+  <title>Brow Nouveau — independent software studio</title>
+  <meta name="description" content="Brow Nouveau, LLC is an independent US-based software studio. We build careful, privacy-respecting tools without analytics, tracking, or framework churn." />
   <meta name="theme-color" content="#f7f4ef" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+
+<header class="site-header">
+  <div class="site-header-inner">
     <a class="brand" href="/">
-      <span class="brand-mark">B<span class="brand-dot">·</span>N</span>
-      <span class="brand-name">Brow Nouveau</span>
+      <svg class="brand-mark-svg" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#6b4a2b"/>
+        <text x="32" y="44" font-family="Iowan Old Style, Charter, Georgia, serif"
+              font-weight="600" font-size="34" fill="#f7f4ef"
+              text-anchor="middle" letter-spacing="-1">bn</text>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Brow Nouveau</span>
+        <span class="brand-sub">Software Studio</span>
+      </span>
     </a>
-  </header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/about.html">About</a>
+      <a href="/principles.html">Principles</a>
+      <a href="/notes/">Notes</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <h1>An independent software studio.</h1>
-      <p class="lede">
-        Brow Nouveau, LLC builds careful, privacy-respecting software. Small teams,
-        considered tools, and a long view on what's worth shipping.
-      </p>
-    </section>
+<main class="wrap">
 
-    <section class="block">
-      <h2>What we do</h2>
+  <section class="hero">
+    <p class="hero-eyebrow">Independent · United States</p>
+    <h1>Software built to last, not to scale prematurely.</h1>
+    <p class="lede">
+      Brow Nouveau is a small, privately-held software studio. We design and
+      operate a focused portfolio of consumer and productivity applications
+      with an emphasis on privacy, durability, and the unfashionable virtue
+      of code you can still read in five years.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>What we work on</h2>
+    <p>
+      Our work tends toward the personal and the practical — software that
+      fits cleanly into the rhythm of someone's day rather than competing
+      for it. We favor projects where the people using the product are also
+      the people paying for it, where the relationship is direct, and where
+      the surface area is small enough to understand end-to-end.
+    </p>
+    <p>
+      We hold our own infrastructure where it matters, ship our own
+      cryptography rather than outsourcing trust, and treat each shipped
+      release like something a person will rely on for years — because, in
+      the work we choose, they usually do.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>How we work</h2>
+    <ul class="principles">
+      <li>
+        <strong>Privacy as the default, not the upsell.</strong>
+        <p>
+          Our consumer products ship with no analytics SDKs, no third-party
+          trackers, and no behavioral telemetry. We collect what's required
+          to deliver the product and nothing else. Where the data is
+          intimate, we encrypt it on the device before it leaves.
+        </p>
+      </li>
+      <li>
+        <strong>Boring stacks, deliberately.</strong>
+        <p>
+          We choose tools that will still compile in 2031. That usually
+          means vanilla web fundamentals, mature server runtimes, and
+          relational databases — not the framework of the quarter. The
+          discipline pays out as fewer dependencies, fewer migrations, and
+          software that survives its authors leaving the building.
+        </p>
+      </li>
+      <li>
+        <strong>Small surface, sharp focus.</strong>
+        <p>
+          We'd rather ship a product that does one thing precisely than a
+          platform that does six things adequately. Most features we
+          consider don't ship. The ones that do tend to stay.
+        </p>
+      </li>
+    </ul>
+    <p style="margin-top: 22px;">
+      <a href="/principles.html">Read our full engineering principles →</a>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Notes</h2>
+    <p>Occasional writing on how we build, what we ship, and why.</p>
+
+    <div class="callout">
+      <p class="callout-eyebrow">Latest · May 2026</p>
+      <h3>The case for boring stacks</h3>
       <p>
-        We design and operate a small portfolio of consumer and productivity
-        applications. Our work tends toward the personal and the practical —
-        software that fits cleanly into the rhythm of someone's day rather than
-        competing for it.
+        Why we shipped a 2026 production application without a build step,
+        without a JavaScript framework, and without regret — and what the
+        industry trades away every time it forgets that the platform itself
+        is enough.
       </p>
-      <p>
-        We work in the open where we can, hold our own infrastructure where it
-        matters, and prefer durable engineering over fashionable engineering.
-      </p>
-    </section>
+      <a class="read-more" href="/notes/the-case-for-boring-stacks.html">Read the essay →</a>
+    </div>
 
-    <section class="block">
-      <h2>How we work</h2>
-      <ul class="principles">
-        <li>
-          <strong>Privacy by default.</strong>
-          We collect what we need to deliver the product and nothing else.
-          Encryption at rest where appropriate; no analytics or third-party
-          tracking in our consumer products.
-        </li>
-        <li>
-          <strong>Small, owned, durable.</strong>
-          We build to last rather than to scale prematurely. Fewer dependencies,
-          fewer abstractions, code we can still read in five years.
-        </li>
-        <li>
-          <strong>Plain language.</strong>
-          Our documentation, terms, and policies are written to be read.
-        </li>
-      </ul>
-    </section>
+    <p>
+      <a href="/notes/">All notes →</a>
+    </p>
+  </section>
 
-    <section class="block">
-      <h2>Contact</h2>
-      <p>
-        General inquiries:
-        <a href="mailto:owner@brownouveau.com">owner@brownouveau.com</a>
-      </p>
-      <p class="entity">
-        Brow Nouveau, LLC is a private limited liability company organized
-        in the United States.
-      </p>
-    </section>
-  </main>
+  <section class="section">
+    <h2>Working with us</h2>
+    <p>
+      We are a small, owner-operated studio and we are selective about
+      outside engagements. If you have a focused problem that fits our
+      practice — particularly one where privacy and durability matter more
+      than feature velocity — we would be glad to hear from you.
+    </p>
+    <p>
+      For all inquiries:
+      <a href="mailto:owner@brownouveau.com">owner@brownouveau.com</a>
+      &nbsp;·&nbsp; <a href="/contact.html">Contact page →</a>
+    </p>
+  </section>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Brow Nouveau, LLC. All rights reserved.</p>
-  </footer>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="footer-entity">
+      <strong>Brow Nouveau, LLC</strong>
+      A privately-held US limited liability company.<br/>
+      Independent software studio.
+    </p>
+    <p class="footer-meta">
+      &copy; 2026 Brow Nouveau, LLC. All rights reserved.<br/>
+      <a href="/contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
